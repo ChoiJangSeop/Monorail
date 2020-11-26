@@ -17,20 +17,20 @@ public class MonoGUI {
 
 }
 
-/* <½ÇÇà °úÁ¤ ¼³¸í>
+/* <ì‹¤í–‰ ê³¼ì • ì„¤ëª…>
  
- 1. Å¸ÀÏÀ» µÎ°Ú½À´Ï´Ù¸¦ ¼±ÅÃ  
- 2. »õ·Î »ı±ä Ã¢¿¡¼­ »õ·Î ³õÀ» Å¸ÀÏ ¼±ÅÃÇÔ. Å¸ÀÏÀ» ¼±ÅÃÇÏ¸é nexticonÀÇ °ªÀÌ rail¿¡¼­ ±× Å¸ÀÏÀ» °¡¸£Å°´Â ÀÎµ¦½º·Î ¹Ù²ñ.
- 3. ÀÌÈÄ Å¸ÀÏ ¼±ÅÃÃ¢ÀÌ ´İÈù´Ù.
- 4. ±×ÈÄ ±×Å¸ÀÏÀ» ¾îµğ¿¡ µÑÁö  ¼±ÅÃÇÑ´Ù.
- 5. µÑ°÷ÀÇ ¹öÆ°À» ¼±ÅÃÇÏ¸é ±× ¹öÆ°ÀÌ ¼±ÅÃÇÑ Å¸ÀÏ·Î º¯°æµÊ¿¡ µ¿½Ã¿¡ nexticonÀÌ 6À¸·Î ¹Ù²ï´Ù.
- (¸¸¾à ¹öÆ°À» ÇÑ¹ø ´­·¯¼­ ¿øÇÏ´Â  ¹öÆ°ÀÇ ÀÌ¹ÌÁö¸¦ ¹Ù²Û´ÙÀ½¿¡, ´Ù¸¥ ¹öÆ°À» ´©¸¥´Ù¸é nexticonÀº 6ÀÌ±â ¶§¹®¿¡ ¿¹¿ÜÃ³¸®°¡ µÈ´Ù. )
+ 1. íƒ€ì¼ì„ ë‘ê² ìŠµë‹ˆë‹¤ë¥¼ ì„ íƒ  
+ 2. ìƒˆë¡œ ìƒê¸´ ì°½ì—ì„œ ìƒˆë¡œ ë†“ì„ íƒ€ì¼ ì„ íƒí•¨. íƒ€ì¼ì„ ì„ íƒí•˜ë©´ nexticonì˜ ê°’ì´ railì—ì„œ ê·¸ íƒ€ì¼ì„ ê°€ë¥´í‚¤ëŠ” ì¸ë±ìŠ¤ë¡œ ë°”ë€œ.
+ 3. ì´í›„ íƒ€ì¼ ì„ íƒì°½ì´ ë‹«íŒë‹¤.
+ 4. ê·¸í›„ ê·¸íƒ€ì¼ì„ ì–´ë””ì— ë‘˜ì§€  ì„ íƒí•œë‹¤.
+ 5. ë‘˜ê³³ì˜ ë²„íŠ¼ì„ ì„ íƒí•˜ë©´ ê·¸ ë²„íŠ¼ì´ ì„ íƒí•œ íƒ€ì¼ë¡œ ë³€ê²½ë¨ì— ë™ì‹œì— nexticonì´ 6ìœ¼ë¡œ ë°”ë€ë‹¤.
+ (ë§Œì•½ ë²„íŠ¼ì„ í•œë²ˆ ëˆŒëŸ¬ì„œ ì›í•˜ëŠ”  ë²„íŠ¼ì˜ ì´ë¯¸ì§€ë¥¼ ë°”ê¾¼ë‹¤ìŒì—, ë‹¤ë¥¸ ë²„íŠ¼ì„ ëˆ„ë¥¸ë‹¤ë©´ nexticonì€ 6ì´ê¸° ë•Œë¬¸ì— ì˜ˆì™¸ì²˜ë¦¬ê°€ ëœë‹¤. )
  
  
  
  */
 
-class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
+class PlayMode extends JFrame{	//ê²Œì„ êµ¬ë™ í´ë˜ìŠ¤
 	
 	JButton[] GrdBt = new JButton[188];
 	JButton[] deco = new JButton[17];
@@ -38,7 +38,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 	JButton AddTile = new JButton();
 	JButton Impossible = new JButton();
 	JButton complete = new JButton();
-	JButton TileNum = new JButton("ÀÜ¿©Å¸ÀÏ : " + 16);
+	JButton TileNum = new JButton("ì”ì—¬íƒ€ì¼ : " + 16);
 	
 	JButton[] imp_bt = new JButton[188];
 	JButton imp_go = new JButton();
@@ -79,124 +79,124 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 	Player Player2 = new Player(2,false);
 	int remain_tile = 16;
 	
-	int tile_num = 6; // ÀÌ ¼ö°¡ 0~5 »çÀÌ°¡ ¾Æ´Ò ¶§ puticon À» ½ÇÇàÇÏ¸é err ¹ß»ıÇÏµµ·Ï ¿¹¿ÜÃ³¸® ÇØ¾ßÇÔ 
+	int tile_num = 6; // ì´ ìˆ˜ê°€ 0~5 ì‚¬ì´ê°€ ì•„ë‹ ë•Œ puticon ì„ ì‹¤í–‰í•˜ë©´ err ë°œìƒí•˜ë„ë¡ ì˜ˆì™¸ì²˜ë¦¬ í•´ì•¼í•¨ 
 	
 	void setIcon(){
-		// rail ±×¸²À» button Å©±â¿¡ ¸Âµµ·Ï ¼öÁ¤  ( rail[0~1] = Á÷¼±·¹ÀÏ, rail[2~5] = °î¼± ·¹ÀÏ )
-		// °æ·Î°¡ Áö±İ ³» ÄÄÇ»ÅÍ¿¡ ¸ÂÃçÁ® ÀÖ¾î¼­ ¿©±â °æ·Î¸¸ ¼öÁ¤ÇØ¼­ µğ¹ö±ëÇÏ¸é µÉµí!
-		// ¹öÆ°µéÀº class³»¿¡ ¼±¾ğ¾È railÀÌ¶ó´Â ÀÌ¹ÌÁö ¹è¿­¿¡ÀúÀå 
+		// rail ê·¸ë¦¼ì„ button í¬ê¸°ì— ë§ë„ë¡ ìˆ˜ì •  ( rail[0~1] = ì§ì„ ë ˆì¼, rail[2~5] = ê³¡ì„  ë ˆì¼ )
+		// ê²½ë¡œê°€ ì§€ê¸ˆ ë‚´ ì»´í“¨í„°ì— ë§ì¶°ì ¸ ìˆì–´ì„œ ì—¬ê¸° ê²½ë¡œë§Œ ìˆ˜ì •í•´ì„œ ë””ë²„ê¹…í•˜ë©´ ë ë“¯!
+		// ë²„íŠ¼ë“¤ì€ classë‚´ì— ì„ ì–¸ì•ˆ railì´ë¼ëŠ” ì´ë¯¸ì§€ ë°°ì—´ì—ì €ì¥ 
 		
-		ImageIcon originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail0.png"); //ÀÌ °æ·Îµé ÀÚ½Å¿¡ ¸Â°Ô ¼öÁ¤ 
+		ImageIcon originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail0.png"); //ì´ ê²½ë¡œë“¤ ìì‹ ì— ë§ê²Œ ìˆ˜ì • 
 		Image originImg = originIcon.getImage(); 
 		Image changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[0] = new ImageIcon(changedImg);
 		//TList[0] = new LeftRight(); 
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail1.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail1.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[1] = new ImageIcon(changedImg);
 		//TList[1] = new UpDown();
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail2.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail2.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[2] = new ImageIcon(changedImg);
 		//TList[2] = new UpRight();
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail3.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail3.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[3] = new ImageIcon(changedImg);
 		//TList[3] = new UpLeft(); 
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail4.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail4.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[4] = new ImageIcon(changedImg);
 		//TList[4] = new DownLeft(); 
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/t_rail5.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/t_rail5.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		t_rail[5] = new ImageIcon(changedImg);
 		//TList[5] = new DownRight();
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail0.png"); //ÀÌ °æ·Îµé ÀÚ½Å¿¡ ¸Â°Ô ¼öÁ¤ 
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail0.png"); //ì´ ê²½ë¡œë“¤ ìì‹ ì— ë§ê²Œ ìˆ˜ì • 
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[0] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail1.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail1.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[1] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail2.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail2.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[2] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail3.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail3.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[3] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail4.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail4.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[4] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail5.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail5.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		rail[5] = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/ground.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/ground.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(50, 50, Image.SCALE_SMOOTH );
 		Ground = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/rail_input.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/rail_input.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		RailInputImg = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/impossible.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/impossible.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		ImpossibleImg = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/complete.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/complete.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		CompleteImg = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/1P.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/1P.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		P1Img = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/2P.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/2P.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		P2Img = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/imp_rail_input.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/imp_rail_input.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		ImpRailInputImg = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/imp_complete.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/imp_complete.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		ImpCompleteImg = new ImageIcon(changedImg);
 		
-		originIcon = new ImageIcon("/Users/ÃÖÀå¼·/Desktop/img/imp_impossible.png");  
+		originIcon = new ImageIcon("/Users/username/Desktop/img/imp_impossible.png");  
 		originImg = originIcon.getImage(); 
 		changedImg= originImg.getScaledInstance(150, 150, Image.SCALE_SMOOTH );
 		ImpImpossibleImg = new ImageIcon(changedImg);
-		// ÀÌ¹ÌÁö »ı¼º ³¡. ¾ÕÀ¸·Î ÀÌ ÀÌ¹ÌÁö·Î ¸ğµÎ »ç¿ëÇÒ ¿¹Á¤
+		// ì´ë¯¸ì§€ ìƒì„± ë. ì•ìœ¼ë¡œ ì´ ì´ë¯¸ì§€ë¡œ ëª¨ë‘ ì‚¬ìš©í•  ì˜ˆì •
 	}
 	
 	
@@ -229,14 +229,14 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 	
 	PlayMode(){
 		
-		setIcon(); //ÀÌ¹ÌÁö Á¦ÀÛ  
+		setIcon(); //ì´ë¯¸ì§€ ì œì‘  
 		SetDeco();
 		setTitle("-- MONORAIL GAME --");
 		setBackground(Color.green);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new FlowLayout(FlowLayout.CENTER, 3, 3)); // »õ·Î add ÇßÀ»¶§ Áß¾ÓÁ¤·Ä, ¹öÆ°°£ ÁÂ¿ì »óÇÏ°£°İ 3
+		setLayout(new FlowLayout(FlowLayout.CENTER, 3, 3)); // ìƒˆë¡œ add í–ˆì„ë•Œ ì¤‘ì•™ì •ë ¬, ë²„íŠ¼ê°„ ì¢Œìš° ìƒí•˜ê°„ê²© 3
 		
-		//°¡·Î 17°³, ¼¼·Î 11°³ÀÇ ¹öÆ° »ı¼º 
+		//ê°€ë¡œ 17ê°œ, ì„¸ë¡œ 11ê°œì˜ ë²„íŠ¼ ìƒì„± 
 		
 		for(int i=0;i<187;i++) {
 			GrdBt[i] = new JButton();
@@ -245,14 +245,14 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 			add(GrdBt[i]);
 			
 			if (i != 93 && i != 92)
-				GrdBt[i].setIcon(Ground);		//³ª¸ÓÁø ´Ù ÀÏ¹İ¶¥
+				GrdBt[i].setIcon(Ground);		//ë‚˜ë¨¸ì§„ ë‹¤ ì¼ë°˜ë•…
 			else {
-				GrdBt[i].setIcon(rail[0]); 	//½ÃÀÛºÎºĞÀÌ¹ÌÁö
+				GrdBt[i].setIcon(rail[0]); 	//ì‹œì‘ë¶€ë¶„ì´ë¯¸ì§€
 				tile.pos_board[i%17][i/17] = new LeftRight(i%17, i/17);
 				tile.pos_board[i%17][i/17].Connectable();
 			}
 		}
-		// °ÔÀÓ ÁøÇà ¹öÆ° ¸Ç ¹Ø¿¡ 3°³ »ı¼º 
+		// ê²Œì„ ì§„í–‰ ë²„íŠ¼ ë§¨ ë°‘ì— 3ê°œ ìƒì„± 
 		
 		Turn.setPreferredSize(new Dimension(150, 150));
 		Turn.setIcon(P1Img);
@@ -274,7 +274,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 		add(complete); 
 		
 		TileNum.setPreferredSize(new Dimension(150, 150));
-		TileNum.setBackground(new Color(150, 75, 0)); 	//°¥»ö
+		TileNum.setBackground(new Color(150, 75, 0)); 	//ê°ˆìƒ‰
 		add(TileNum); 
 		
 		setSize(950,900);
@@ -285,10 +285,10 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 	class SelectMode extends JFrame{
 		
 		SelectMode(){
-			setTitle("Å¸ÀÏ ¼±ÅÃ");
+			setTitle("íƒ€ì¼ ì„ íƒ");
 			//setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));			
 			setLayout(new GridLayout(0,3));
-			//JLabel label = new JLabel("¾î¶² Å¸ÀÏÀ» ¼±ÅÃÇÏ½Ç °Ç°¡¿ä?", JLabel.CENTER);
+			//JLabel label = new JLabel("ì–´ë–¤ íƒ€ì¼ì„ ì„ íƒí•˜ì‹¤ ê±´ê°€ìš”?", JLabel.CENTER);
 			//label.setFont(new Font("", Font.BOLD, 20));
 			//label.setPreferredSize(new Dimension(700, 50));
 			//add(label);
@@ -298,7 +298,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 				TileOption[i] = new JButton(""+ i);
 				TileOption[i].setIcon(rail[i]);
 				
-				//»õ·Î¿î Ã¢¿¡¼­ ¹öÆ°À» ´­·¶À» ¶§ »õ·Î¿îÃ¢ ²¨Áö°í nexticon °ª º¯È­ 
+				//ìƒˆë¡œìš´ ì°½ì—ì„œ ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ ìƒˆë¡œìš´ì°½ êº¼ì§€ê³  nexticon ê°’ ë³€í™” 
 				
 				TileOption[i].addActionListener(new ActionListener() {
 					public void actionPerformed (ActionEvent e) {
@@ -327,7 +327,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 	boolean canPutTile() {
 		return (tile_num > 0);
 	}
-	//¹öÆ°À» ´©¸£¸é nexticonÀÇ °ª¿¡ µû¶ó ¹öÆ°ÀÇ ¾ÆÀÌÄÜÀÌ ¹Ù²ñ. ´Ü ¹öÆ°À» ÇÑ°³¸¸ ´©¸£°Ô ÇÏ±âÀ§ÇØ ÇÑ¹ø »ç¿ë ÈÄ nexticonÀ» 6À¸·Î º¯°æ.
+	//ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ nexticonì˜ ê°’ì— ë”°ë¼ ë²„íŠ¼ì˜ ì•„ì´ì½˜ì´ ë°”ë€œ. ë‹¨ ë²„íŠ¼ì„ í•œê°œë§Œ ëˆ„ë¥´ê²Œ í•˜ê¸°ìœ„í•´ í•œë²ˆ ì‚¬ìš© í›„ nexticonì„ 6ìœ¼ë¡œ ë³€ê²½.
 	
 	class PutTileAction implements ActionListener {
 		
@@ -394,14 +394,14 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 				
 				
 			}
-			// 6À¸·Î ¹Ù²Ù´Â ÀÌÀ¯´Â 6ÀÏ¶§´Â À§¿¡ ¸»ÇÑ ¿¹¿ÜÃ³¸®°¡ µÇ±â ¶§¹®. setnexticonÀ» ÅëÇØ nexticonÀÇ °ªÀ» »ı¼ºÇÏ´Âµ¥
-			// ÀÌ°Ç ¹öÆ° ÇÑ°³ÀÇ ±×¸²¸¸ ¹Ù²ã¾ßÇÏ±â¶§¹®¿¡  ÇÑ¹ø¾²°í ¹ö·Á¾ßÇÔ.
+			// 6ìœ¼ë¡œ ë°”ê¾¸ëŠ” ì´ìœ ëŠ” 6ì¼ë•ŒëŠ” ìœ„ì— ë§í•œ ì˜ˆì™¸ì²˜ë¦¬ê°€ ë˜ê¸° ë•Œë¬¸. setnexticonì„ í†µí•´ nexticonì˜ ê°’ì„ ìƒì„±í•˜ëŠ”ë°
+			// ì´ê±´ ë²„íŠ¼ í•œê°œì˜ ê·¸ë¦¼ë§Œ ë°”ê¿”ì•¼í•˜ê¸°ë•Œë¬¸ì—  í•œë²ˆì“°ê³  ë²„ë ¤ì•¼í•¨.
 		}
 		
 	}
 	
 	
-	//Å¸ÀÏÀ» µÎ°Ú½À´Ï´Ù ¸¦ ¼±ÅÃÇßÀ» ¶§ ¾î¶² Å¸ÀÏÀ» ¼±ÅÃÇÒÁö °í¸£´Â Ã¢ÀÌ ¶á´Ù. Å¸ÀÏÀ» °í¸£¸é ±×¿¡ ¸Â°Ô nexticonÀÌ º¯°æµÈ´Ù.
+	//íƒ€ì¼ì„ ë‘ê² ìŠµë‹ˆë‹¤ ë¥¼ ì„ íƒí–ˆì„ ë•Œ ì–´ë–¤ íƒ€ì¼ì„ ì„ íƒí• ì§€ ê³ ë¥´ëŠ” ì°½ì´ ëœ¬ë‹¤. íƒ€ì¼ì„ ê³ ë¥´ë©´ ê·¸ì— ë§ê²Œ nexticonì´ ë³€ê²½ëœë‹¤.
 	
 	class SelectTileAction implements ActionListener {
 		public void actionPerformed (ActionEvent e) {
@@ -424,8 +424,8 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 			
 			else { 
 				
-				//Å¸ÀÏ À§Ä¡ ÁöÁ¤
-				//¿©±â¼­ Á¶°ÇÀÌ ºÎÇÕÇÏ´ÂÁö ÆÇ´ÜÇÏ¿© valid ÆÇ´ÜÇÏ´Â°ÍÀº 2019310036 ÃÖÀå¼· ÇĞ»ıÀÌ ÀÛ¼º
+				//íƒ€ì¼ ìœ„ì¹˜ ì§€ì •
+				//ì—¬ê¸°ì„œ ì¡°ê±´ì´ ë¶€í•©í•˜ëŠ”ì§€ íŒë‹¨í•˜ì—¬ valid íŒë‹¨í•˜ëŠ”ê²ƒì€ 2019310036 ìµœì¥ì„­ í•™ìƒì´ ì‘ì„±
 				boolean valid = true;
 				
 				for (int i=0; i<T_Set.num; ++i) {
@@ -443,14 +443,14 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 				
 				if (valid == true) 
 					valid = T_Set.is_one_line();
-				//¿©±â¼­ Á¶°ÇÀÌ ºÎÇÕÇÏ´ÂÁö ÆÇ´ÜÇÏ¿© valid ÆÇ´ÜÇÏ´Â°ÍÀº 2019310036 ÃÖÀå¼· ÇĞ»ıÀÌ ÀÛ¼º ¿©±â±îÁö
+				//ì—¬ê¸°ì„œ ì¡°ê±´ì´ ë¶€í•©í•˜ëŠ”ì§€ íŒë‹¨í•˜ì—¬ valid íŒë‹¨í•˜ëŠ”ê²ƒì€ 2019310036 ìµœì¥ì„­ í•™ìƒì´ ì‘ì„± ì—¬ê¸°ê¹Œì§€
 				
 				if (valid) {
 					for (int i=0; i<T_Set.num; ++i) 
 						GrdBt[tile_location[i]].setIcon(rail[T_Set.TSet[i].label]);
 					
 					remain_tile -= T_Set.num;
-					TileNum.setText("ÀÜ¿©Å¸ÀÏ : " + remain_tile);
+					TileNum.setText("ì”ì—¬íƒ€ì¼ : " + remain_tile);
 				
 					if (T_Set.TSet[0].isAllConnect()) {
 						
@@ -491,7 +491,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 
 	
 //*****************************************
-//¿©±â ¾Æ·¡´Â 2019310036 ÃÖÀå¼· ÇĞ»ıÀÌ ÄÚµå ÀÛ¼º
+//ì—¬ê¸° ì•„ë˜ëŠ” 2019310036 ìµœì¥ì„­ í•™ìƒì´ ì½”ë“œ ì‘ì„±
 	
 	class ImpossibleMode implements ActionListener {
 		public void actionPerformed (ActionEvent e) {
@@ -517,7 +517,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 				GrdBt[i].addActionListener(new ImpPutTileAction());			
 				
 			}
-			// °ÔÀÓ ÁøÇà ¹öÆ° ¸Ç ¹Ø¿¡ 3°³ »ı¼º 
+			// ê²Œì„ ì§„í–‰ ë²„íŠ¼ ë§¨ ë°‘ì— 3ê°œ ìƒì„± 
 			AddTile.removeActionListener(SelectTile);
 			AddTile.addActionListener(new ImpChooseTileAction());
 			AddTile.setIcon(ImpRailInputImg);
@@ -528,7 +528,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 			complete.removeActionListener(Complete);
 			complete.addActionListener(new ImpCompleteAction());
 			complete.setIcon(ImpCompleteImg);
-			// ¾ÆÀÌÄÜ »ö ¹Ù²Ù±â
+			// ì•„ì´ì½˜ ìƒ‰ ë°”ê¾¸ê¸°
 		}
 	}
 	void impossibleDeco() {
@@ -607,7 +607,7 @@ class PlayMode extends JFrame{	//°ÔÀÓ ±¸µ¿ Å¬·¡½º
 						imp_temp.seePosBoard();
 						b.setIcon(rail[tile_num]);
 						remain_tile--;
-						TileNum.setText("ÀÜ¿©Å¸ÀÏ : " + remain_tile);
+						TileNum.setText("ì”ì—¬íƒ€ì¼ : " + remain_tile);
 						tile_num=6;
 						break;
 						
